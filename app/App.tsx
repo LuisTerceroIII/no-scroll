@@ -1,13 +1,14 @@
+
+import { Suspense } from 'react'
 import './App.css'
-import { MainGaleryScreen } from './features/Galery/screens/MainGaleryScreen'
-import { Provider } from 'react-redux'
-import { store } from './store/root'
+import { HomeMainScreen } from './features/Home/screens/HomeMainScreen'
 
 function App() {
+
 	return (
-		<Provider store={store}>
-			<MainGaleryScreen />
-		</Provider>
+		<Suspense>
+			<HomeMainScreen />
+		</Suspense>
 	)
 }
 
