@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { NoScrollGalerySlice } from "../features/galery/store/no-scroll-galery-slice/no-scroll-galery-slice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { NoRushSlice } from "../ethos-components/comunications-layers/no-rush-layer/store/no-rush-slice";
 
 const rootReducer = combineReducers({
-    noScrollGalery: NoScrollGalerySlice.reducer
+    noScrollGalery: NoScrollGalerySlice.reducer,
+    noRush: NoRushSlice.reducer
 })
 
 export const store = configureStore({

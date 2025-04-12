@@ -1,16 +1,37 @@
-import { NavLink } from 'react-router'
+import { NavLink, useNavigate } from 'react-router'
 import styles from './homeMainScreen.module.css'
 import { isValidPublicPath } from '../../../router/routes'
+import { NoRushAtom } from '../../../ethos-components/comunications-layers/no-rush-layer/screens/no-rush-atom'
+import { EthosAtom } from '../../../ethos-components/ethos-atom'
+import { LayersNames } from '../../../ethos-components/comunications-layers/layers-protocol'
+import { useMemo } from 'react'
+import { useAppSelector } from '../../../store/root'
 
-const menu =  ["galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx"]
+const menu = ["galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx"]
 
 export const HomeMainScreen = () => {
 
-	const links = menu?.map((link, index) => (
-		<NavLink key={index} to={isValidPublicPath(link) ? link : "/"} className={styles.navLink}>
-			<h1 className={styles.text}>{link}</h1>
-		</NavLink>
-	))
+	const navigation = useNavigate()
+
+	const { registerElementsIds } = useAppSelector(state => state.noRush)
+
+	const links = useMemo(() => {
+		return menu?.map((link, index) => (
+			<EthosAtom
+				key={index}
+				children={(
+					<h1 className={styles.text}>{link}</h1>
+				)} 
+				onAction={() => {
+					if(isValidPublicPath(link)) {
+						console.log("En on action , ahi vamos!")
+						navigation(link)
+					}
+				}}
+				model={LayersNames.NO_RUSH}
+			/>
+		))
+	}, [registerElementsIds?.length])
 
 	return (
 		<div className={styles.container}>
