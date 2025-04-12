@@ -16,7 +16,7 @@ export const EthosAtom = <Layer extends LayersNames>(props: EthosAtomProps<Layer
 
 	return (
 		<Suspense fallback={<div>Cargando ...</div>}>
-			{model === LayersNames.NO_RUSH && <NoRushAtom  children={children} onAction={onAction} timeToComeBack={4} />}
+			{model === LayersNames.NO_RUSH && <NoRushAtom  children={children} onAction={onAction} timeToComeBack={5} />}
 			{/* {Atom === LayersNames.MOVE_IN_TIME && <MoveInTimeAtom children={children} />}*/}
 		</Suspense>
 	)

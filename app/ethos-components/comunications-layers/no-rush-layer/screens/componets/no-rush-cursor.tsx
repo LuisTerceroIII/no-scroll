@@ -4,7 +4,7 @@ import styles from './no-rush-cursor.module.css'
 type Props = {
 
 }
-export const NoRushCursor = forwardRef<HTMLElement, Props>((props,ref) => {
+export const NoRushCursor = forwardRef<HTMLElement, Props>((props, ref) => {
 
     const cursorRef = useRef<HTMLDivElement>(null)
 
@@ -21,7 +21,9 @@ export const NoRushCursor = forwardRef<HTMLElement, Props>((props,ref) => {
                 top: ${offsetY}px;
                 left: ${offsetX}px;
                 opacity: 1;
+                transition: opacity 0.6s ease-out;
             `)
+            cursorRef.current.classList.add(styles.animation)
         }
     }
 
@@ -29,6 +31,7 @@ export const NoRushCursor = forwardRef<HTMLElement, Props>((props,ref) => {
         if (ref && cursorRef?.current) {
             cursorRef.current.setAttribute('style', `
                 opacity: 0;
+                transition: opacity 0.6s ease-out;
             `)
         }
     }
@@ -51,7 +54,10 @@ export const NoRushCursor = forwardRef<HTMLElement, Props>((props,ref) => {
     return (
         <div
             ref={cursorRef}
-            className={styles.cursor}
-        ></div>
+            className={styles.loader}
+        >
+
+
+        </div>
     )
 })
