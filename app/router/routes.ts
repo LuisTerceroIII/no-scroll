@@ -1,5 +1,3 @@
-import { MainGaleryScreen } from "../features/Galery/screens/MainGaleryScreen";
-
 
 export const publicRoutes = [
     {

@@ -1,13 +1,10 @@
 
-import { useAppSelector } from "../../../../../store/root";
-import { GaleryElement as GaleryElementType } from "../../../store/no-scroll-galery-slice/NoScrollGalerySlice";
+import { GaleryElement as GaleryElementType } from "../../../store/no-scroll-galery-slice/no-scroll-galery-slice";
 import styles from "./galeryElement.module.css"
 
 export const GaleryElement = (props: GaleryElementType & { index: number, move: (index: number) => void }) => {
     
     const { description, backgroundColor, index, move } = props;
-
-    const elementsData = useAppSelector((state) => state.noScrollGalery.galery?.elements);
 
     return (
         <div 

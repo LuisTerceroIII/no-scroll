@@ -1,7 +1,7 @@
 
 import { Suspense } from 'react'
 import './App.css'
-import { HomeMainScreen } from './features/Home/screens/HomeMainScreen'
+import { HomeMainScreen } from './features/home/screens/home-main-screen'
 
 function App() {
 

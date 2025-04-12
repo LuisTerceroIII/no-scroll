@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { StoreSlices } from "../../../../store/Slices";
 import { Connection, ConnectionStatusProtocol } from "../../../../types/connection-api-protocol.types";
-import NoScrollGaleryStaticData from "./NoScrollGaleryStaticData.json";
+import NoScrollGaleryStaticData from "./no-scroll-galery-static-data.json";
 
 export type GaleryElement = {
     id: string

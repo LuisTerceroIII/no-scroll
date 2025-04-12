@@ -1,8 +1,8 @@
-import { GaleryElement } from "./components/GaleryElement/GaleryElement";
-import { GaleryElement as GaleryElementType } from "../store/no-scroll-galery-slice/NoScrollGalerySlice";
+import { GaleryElement } from "./components/galery-element/galery-element";
+import { GaleryElement as GaleryElementType } from "../store/no-scroll-galery-slice/no-scroll-galery-slice";
 import { FC, Suspense } from "react";
-import { useGaleryNavigation } from "../hooks/useGaleryNavigation";
-import styles from "./mainGaleryScreen.module.css"
+import { useGaleryNavigation } from "../hooks/use-galery-navigation";
+import styles from "./main-galery-screen.module.css"
 import { Slider, styled } from "@mui/material";
 
 const CustomSlider = styled(Slider)({

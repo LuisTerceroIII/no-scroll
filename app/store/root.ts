@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { NoScrollGalerySlice } from "../features/Galery/store/no-scroll-galery-slice/NoScrollGalerySlice";
+import { NoScrollGalerySlice } from "../features/galery/store/no-scroll-galery-slice/no-scroll-galery-slice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 const rootReducer = combineReducers({

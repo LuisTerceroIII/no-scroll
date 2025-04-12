@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { store } from './store/root'
 import { Provider } from 'react-redux';
 import App from './App.tsx';
-import { MainGaleryScreen } from './features/Galery/screens/MainGaleryScreen.tsx';
+import { MainGaleryScreen } from './features/galery/screens/main-galery-screen.tsx';
 
 createRoot(document.getElementById('root')!).render(
 	<Provider store={store}>
