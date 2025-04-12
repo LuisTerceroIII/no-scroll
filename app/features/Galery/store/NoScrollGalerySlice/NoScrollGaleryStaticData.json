@@ -1,0 +1,23 @@
+[
+    {
+        "id": "0001",
+        "title": "0001",
+        "description": "MOVIMIENTOS\n&\nMOVIVIENTES",
+        "type": "phrase",
+        "backgroundColor": "#FFEA00"
+    },
+    {
+        "id": "0002",
+        "title": "0002",
+        "description": "REVOLUCION\n&\nFILOSOFIA",
+        "type": "phrase",
+        "backgroundColor": "#FFEA00"
+    },
+    {
+        "id": "0003",
+        "title": "0003",
+        "description": "ARTE\n&\nVIDA",
+        "type": "phrase",
+        "backgroundColor": "#FFEA00"
+    }
+]
