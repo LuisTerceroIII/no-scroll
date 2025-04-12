@@ -1,28 +1,24 @@
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     touch-action: none;
     -webkit-touch-callout: none;
     user-select: none;
     text-align: center;
     background-color: #0958D2;
     min-height: 100%;
-    align-items: center;
     padding: 100px;
-    align-items: center;
 }
 
 .title {
-    font-size: clamp(50px, 15vw, 75px);
+    font-size: clamp(40px, 15vw, 75px);
     word-wrap: break-word;
     hyphens: auto;
     color: #EBACE4;
     cursor: pointer;
     transition: 0.3s;
-    position: absolute;
-    top: 5%;
+    margin-top: -10px;
 }
 
 .links {
@@ -30,12 +26,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
-    margin-bottom: 8%;
-
+    column-gap: 20px;
+    width: 80%;
+    margin-top: -10px;
+    align-self: center;
 }
 .navLink {
-    width: 20%;
     cursor: pointer;
 }
 .text {
