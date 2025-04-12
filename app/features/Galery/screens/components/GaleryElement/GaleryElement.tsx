@@ -12,9 +12,8 @@ export const GaleryElement = (props: GaleryElementType & { index: number, move: 
     return (
         <div 
             className={styles.elementContainer} 
-            style={{ backgroundColor, zIndex: index }} 
-            onClick={() => move(index < (elementsData?.length ?? 0) - 1 ? index + 1 : 0)}>
-            <h1 style={{fontSize: 170}}>{description}</h1>
+            style={{ backgroundColor, zIndex: index }}>
+            <h1 className={styles.text}>{description}</h1>
         </div>
     )
 }

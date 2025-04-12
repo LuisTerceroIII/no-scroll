@@ -1,0 +1,12 @@
+.sliderContainer {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+
+    z-index: 999999;
+}
+.slider {
+    width: 100%;
+}
