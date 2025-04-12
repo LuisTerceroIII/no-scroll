@@ -2,10 +2,12 @@ import { NavLink } from 'react-router'
 import styles from './homeMainScreen.module.css'
 import { isValidPublicPath } from '../../../router/routes'
 
+const menu =  ["galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx"]
+
 export const HomeMainScreen = () => {
 
-	const links = ["galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx","galery", "/", "xtrx"]?.map((link) => (
-		<NavLink key={link} to={isValidPublicPath(link) ? link : "/"} className={styles.navLink}>
+	const links = menu?.map((link, index) => (
+		<NavLink key={index} to={isValidPublicPath(link) ? link : "/"} className={styles.navLink}>
 			<h1 className={styles.text}>{link}</h1>
 		</NavLink>
 	))

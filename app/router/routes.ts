@@ -1,14 +1,14 @@
 import { MainGaleryScreen } from "../features/Galery/screens/MainGaleryScreen";
-import App from "../App";
+
 
 export const publicRoutes = [
     {
         path: "/",
-        element: App
+        element: undefined
     },
     {
         path: "galery",
-        element: MainGaleryScreen
+        element: undefined
     }
 ]
 

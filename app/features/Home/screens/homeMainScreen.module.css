@@ -10,13 +10,15 @@
     background-color: #0958D2;
     min-height: 100%;
     align-items: center;
+    padding: 100px;
+    align-items: center;
 }
 
 .title {
     font-size: clamp(50px, 15vw, 75px);
     word-wrap: break-word;
     hyphens: auto;
-    color: #FA8600;
+    color: #EBACE4;
     cursor: pointer;
     transition: 0.3s;
     position: absolute;
@@ -28,9 +30,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    cursor: pointer;
+    margin-bottom: 8%;
+
 }
 .navLink {
     width: 20%;
+    cursor: pointer;
 }
 .text {
     font-size: clamp(50px, 15vw, 60px);
@@ -40,7 +46,6 @@
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
-    width: 50%;
     text-align: center;
 }
 .text:hover {
