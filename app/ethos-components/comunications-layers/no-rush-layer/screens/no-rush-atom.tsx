@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../../store/root'
 import { NoRushSlice } from '../store/no-rush-slice'
 import { useGenerateId } from '../../../hooks/useGenerateId'
+import styles from './no-rush-atom.module.css'
+import { NoRushCursor } from './componets/no-rush-cursor'
 
 interface NoRushAtomProps {
     children: React.ReactNode
@@ -25,6 +27,10 @@ export const NoRushAtom = (props: NoRushAtomProps) => {
 
     const resetTime = () => setTime(0)
 
+    const cursorParentRef = useRef<HTMLDivElement>(null)
+    const cursorRef = useRef<HTMLDivElement>(null)
+
+
     /**
      * Effect: when the timer reaches the target and it's actively running,
      * trigger the `onAction` callback and reset the state.
@@ -44,7 +50,7 @@ export const NoRushAtom = (props: NoRushAtomProps) => {
      * 
      * Once activated, the component "owns" the interaction — others should respect this exclusivity.
      */
-    const noRushedAction = () => {
+    const noRushedAction = (event: React.MouseEvent) => {
         resetTime()
         dispatch(NoRushSlice.actions.setFocusElementId(atomId))
         // Start local timer
@@ -68,9 +74,14 @@ export const NoRushAtom = (props: NoRushAtomProps) => {
     }
 
     return (
-        <div onMouseOver={noRushedAction} onMouseLeave={onElementDisconnection}>
+        <div
+            ref={cursorParentRef}
+            className={styles.element}
+            onMouseOver={(event) => noRushedAction(event)} 
+            onMouseLeave={onElementDisconnection}
+        >
             {children}
-            <span>{time}/{timeToComeBack}</span>
+            <NoRushCursor ref={cursorParentRef || null} /> 
         </div>
     )
 }

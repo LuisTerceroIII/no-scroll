@@ -1,7 +1,6 @@
-import { NavLink, useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import styles from './homeMainScreen.module.css'
 import { isValidPublicPath } from '../../../router/routes'
-import { NoRushAtom } from '../../../ethos-components/comunications-layers/no-rush-layer/screens/no-rush-atom'
 import { EthosAtom } from '../../../ethos-components/ethos-atom'
 import { LayersNames } from '../../../ethos-components/comunications-layers/layers-protocol'
 import { useMemo } from 'react'
@@ -40,6 +39,8 @@ export const HomeMainScreen = () => {
 			<div className={styles.links}>
 				{links}
 			</div>
+
+			<div className={styles.cursor}></div>
 
 		</div>
 	)
