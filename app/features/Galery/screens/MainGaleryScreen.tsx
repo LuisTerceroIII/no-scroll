@@ -1,7 +1,6 @@
 import { GaleryElement } from "./components/GaleryElement/GaleryElement";
 import { GaleryElement as GaleryElementType, NoScrollGalerySlice } from "../store/NoScrollGalerySlice/NoScrollGalerySlice";
-import { useAppDispatch, useAppSelector } from "../../../store/root";
-import { FC, Suspense, useEffect } from "react";
+import { FC, Suspense } from "react";
 import { useGaleryNavigation } from "../hooks/useGaleryNavigation";
 
 
