@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/root";
-import { NoScrollGalerySlice } from "../store/NoScrollGalerySlice/NoScrollGalerySlice";
+import { NoScrollGalerySlice } from "../store/no-scroll-galery-slice/NoScrollGalerySlice";
 
 export const useGaleryNavigation = () => {
 	const dispatch = useAppDispatch()

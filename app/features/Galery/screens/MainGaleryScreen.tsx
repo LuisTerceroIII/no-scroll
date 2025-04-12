@@ -1,5 +1,5 @@
 import { GaleryElement } from "./components/GaleryElement/GaleryElement";
-import { GaleryElement as GaleryElementType } from "../store/NoScrollGalerySlice/NoScrollGalerySlice";
+import { GaleryElement as GaleryElementType } from "../store/no-scroll-galery-slice/NoScrollGalerySlice";
 import { FC, Suspense } from "react";
 import { useGaleryNavigation } from "../hooks/useGaleryNavigation";
 import styles from "./mainGaleryScreen.module.css"
