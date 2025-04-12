@@ -22,10 +22,7 @@ export const HomeMainScreen = () => {
 					<h1 className={styles.text}>{link}</h1>
 				)} 
 				onAction={() => {
-					if(isValidPublicPath(link)) {
-						console.log("En on action , ahi vamos!")
-						navigation(link)
-					}
+					if(isValidPublicPath(link))navigation(link)
 				}}
 				model={LayersNames.NO_RUSH}
 			/>

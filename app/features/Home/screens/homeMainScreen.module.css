@@ -32,14 +32,10 @@
     margin-top: -10px;
     align-self: center;
     overflow: scroll;
-
 }
-
-.navLink {}
 
 .text {
     font-size: clamp(50px, 15vw, 60px);
-    margin: 0;
     line-height: 1.2;
     margin-bottom: 80px;
     color: #fff;
