@@ -15,7 +15,6 @@ export const useGenerateId = ({ prefix = 'element' }: UseGenerateIdProps = {}) =
   useEffect(() => {
     const generatedId = `${prefix}-${nanoid()}`
     setId(generatedId)
-    console.log("🚀 ~ useEffect ~ generatedId:", generatedId)
     
     dispatch(NoRushSlice.actions.registerId({ id: generatedId }))
   }, [])

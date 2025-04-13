@@ -5,11 +5,15 @@ import { EthosAtom } from '../../../ethos-components/ethos-atom'
 import { LayersNames } from '../../../ethos-components/comunications-layers/layers-protocol'
 import { useEffect, useMemo } from 'react'
 import { useAppSelector } from '../../../store/root'
-import { addToast } from "@heroui/toast";
-import { ToastProvider } from "@heroui/toast";
+import { addToast, closeAll, ToastProvider } from "@heroui/toast";
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 
-const menu = ["timeline-galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "timeline-galery", "/", "xtrx", "timeline-galery", "/", "xtrx"]
+const menu = [
+	"timeline-galery", "/", "xtrx", "galery", "/",  
+	"xtrx", "timeline-galery", "/", "xtrx", "move-in-layers", 
+	"xtrx", "move-in-layers", "/", "xtrx", "timeline-galery", 
+	"/", "xtrx", "timeline-galery", "/", "xtrx"
+]
 
 export const HomeMainScreen = () => {
 
@@ -25,10 +29,12 @@ export const HomeMainScreen = () => {
 			color: "primary",
 			icon: <SelfImprovementIcon />,
 			shouldShowTimeoutProgress: true,
-			timeout: 10000,
-			hideCloseButton: true
-
+			timeout: 4000,
+			hideCloseButton: true,
 		})
+		return () => {
+			closeAll()
+		}
 	}, [])
 
 	const links = useMemo(() => {

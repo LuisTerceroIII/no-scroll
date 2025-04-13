@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { NoScrollGalerySlice } from "../features/galery/store/no-scroll-galery-slice/no-scroll-galery-slice";
+import { NoScrollGalerySlice } from "../features/timeline-galery/store/no-scroll-galery-slice/no-scroll-galery-slice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { NoRushSlice } from "../ethos-components/comunications-layers/no-rush-layer/store/no-rush-slice";
 

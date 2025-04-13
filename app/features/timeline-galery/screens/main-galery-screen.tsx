@@ -4,7 +4,7 @@ import { FC, Suspense, useEffect } from "react";
 import { useGaleryNavigation } from "../hooks/use-galery-navigation";
 import styles from "./main-galery-screen.module.css"
 import { Slider, styled } from "@mui/material";
-import { addToast, ToastProvider } from "@heroui/toast";
+import { addToast, closeAll, ToastProvider } from "@heroui/toast";
 import SwapHorizontalCircleIcon from '@mui/icons-material/SwapHorizontalCircle';
 
 const CustomSlider = styled(Slider)({
@@ -52,9 +52,12 @@ export const MainGaleryScreen: FC = () => {
 			color: "default",
 			icon: <SwapHorizontalCircleIcon />,
 			shouldShowTimeoutProgress: true,
-			timeout: 10000,
+			timeout: 4000,
 			hideCloseButton: true
 		})
+        return () => {
+			closeAll()
+		}
 	}, [])
 
     return (

@@ -7,6 +7,10 @@ export const publicRoutes = [
     {
         path: "timeline-galery",
         element: undefined
+    },
+    {
+        path: "move-in-layers",
+        element: undefined
     }
 ]
 
