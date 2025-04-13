@@ -9,7 +9,7 @@ import { addToast } from "@heroui/toast";
 import { ToastProvider } from "@heroui/toast";
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 
-const menu = ["galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx"]
+const menu = ["timeline-galery", "/", "xtrx", "galery", "/", "xtrx", "galery", "/", "xtrx", "timeline-galery", "/", "xtrx", "timeline-galery", "/", "xtrx"]
 
 export const HomeMainScreen = () => {
 
@@ -25,7 +25,7 @@ export const HomeMainScreen = () => {
 			color: "primary",
 			icon: <SelfImprovementIcon />,
 			shouldShowTimeoutProgress: true,
-			timeout: 20000,
+			timeout: 10000,
 			hideCloseButton: true
 
 		})

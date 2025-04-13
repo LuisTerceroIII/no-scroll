@@ -5,7 +5,7 @@ export const publicRoutes = [
         element: undefined
     },
     {
-        path: "galery",
+        path: "timeline-galery",
         element: undefined
     }
 ]

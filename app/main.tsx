@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
 			<BrowserRouter>
 				<Routes>
 					<Route path={"/"} element={<App />} />
-					<Route path={"/galery"} element={<MainGaleryScreen />} />
+					<Route path={"/timeline-galery"} element={<MainGaleryScreen />} />
 				</Routes>
 			</BrowserRouter>
 		</Provider>

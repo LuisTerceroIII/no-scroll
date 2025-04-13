@@ -37,6 +37,7 @@ const CustomSlider = styled(Slider)({
 });
 
 export const MainGaleryScreen: FC = () => {
+    
     const { elementsData, currentElement, move } = useGaleryNavigation()
 
     const elements = elementsData?.map((element: GaleryElementType, index: number) => (
@@ -46,12 +47,12 @@ export const MainGaleryScreen: FC = () => {
     useEffect(() => {
 		addToast({
 			title: "MOVE IN TIMELINE",
-			description: "Desplázate por las secciones usando la barra de progreso. Mueve entre los puntos",
+			description: "Desplázate por las secciones usando la barra de progreso.",
 			variant: "flat",
 			color: "default",
 			icon: <SwapHorizontalCircleIcon />,
 			shouldShowTimeoutProgress: true,
-			timeout: 20000,
+			timeout: 10000,
 			hideCloseButton: true
 		})
 	}, [])
