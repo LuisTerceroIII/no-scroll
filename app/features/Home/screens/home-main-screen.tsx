@@ -9,9 +9,9 @@ import { addToast, closeAll, ToastProvider } from "@heroui/toast";
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 
 const menu = [
-	"timeline-galery", "/", "xtrx", "galery", "/",  
-	"xtrx", "timeline-galery", "/", "xtrx", "move-in-layers", 
-	"xtrx", "move-in-layers", "/", "xtrx", "timeline-galery", 
+	"timeline-galery", "/", "xtrx", "galery", "/",
+	"xtrx", "timeline-galery", "/", "xtrx", "move-in-layers",
+	"xtrx", "move-in-layers", "/", "xtrx", "timeline-galery",
 	"/", "xtrx", "timeline-galery", "/", "xtrx"
 ]
 
@@ -53,15 +53,15 @@ export const HomeMainScreen = () => {
 	}, [registerElementsIds?.length])
 
 	return (
-
-			<div className={styles.container}>
-				<ToastProvider placement={"top-center"} toastOffset={40} maxVisibleToasts={1}/>
+		<div className={styles.container}>
+			<>
+				<ToastProvider placement={"top-center"} toastOffset={40} maxVisibleToasts={1} />
 				<h1 className={styles.title}>NO SCRXLL</h1>
 				<div className={styles.links}>
 					{links}
-					</div>
+				</div>
 				<div className={styles.cursor}></div>
-			</div>
+			</>
+		</div>
 	)
-
 }

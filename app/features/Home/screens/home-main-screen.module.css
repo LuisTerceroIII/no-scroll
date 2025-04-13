@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    touch-action: none;
     -webkit-touch-callout: none;
     user-select: none;
     text-align: center;
     background-color: #0958D2;
-    min-height: 100svh;
     padding: 10px;
     overflow: scroll;
     align-items: center;
     justify-content: center;
+    min-height: 100svh;
 }
 
 .title {
@@ -20,7 +19,6 @@
     hyphens: auto;
     color: #EBACE4;
     transition: 0.3s;
-
 }
 
 .info {
@@ -37,17 +35,17 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 40px;
+    row-gap: 40px;
     width: 80%;
+    height: 100%;
     margin-top: 20px;
     align-self: center;
-    overflow: visible;
 }
 
 .text {
-    font-size: clamp(50px, 15vw, 60px);
+    font-size: clamp(10px, 6vw, 60px);
     line-height: 1.2;
-    margin-bottom: 80px;
     color: #fff;
     transition: 0.3s;
     text-align: center;
