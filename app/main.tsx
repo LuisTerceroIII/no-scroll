@@ -6,14 +6,18 @@ import { store } from './store/root'
 import { Provider } from 'react-redux';
 import App from './App.tsx';
 import { MainGaleryScreen } from './features/galery/screens/main-galery-screen.tsx';
+import { HeroUIProvider } from '@heroui/system';
+
 
 createRoot(document.getElementById('root')!).render(
-	<Provider store={store}>
-		<BrowserRouter>
-			<Routes>
-				<Route path={"/"} element={<App />} />
-				<Route path={"/galery"} element={<MainGaleryScreen />} />
-			</Routes>
-		</BrowserRouter>
-	</Provider>
+	<HeroUIProvider>
+		<Provider store={store}>
+			<BrowserRouter>
+				<Routes>
+					<Route path={"/"} element={<App />} />
+					<Route path={"/galery"} element={<MainGaleryScreen />} />
+				</Routes>
+			</BrowserRouter>
+		</Provider>
+	</HeroUIProvider>
 )

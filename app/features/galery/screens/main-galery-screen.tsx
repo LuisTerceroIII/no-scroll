@@ -1,9 +1,11 @@
 import { GaleryElement } from "./components/galery-element/galery-element";
 import { GaleryElement as GaleryElementType } from "../store/no-scroll-galery-slice/no-scroll-galery-slice";
-import { FC, Suspense } from "react";
+import { FC, Suspense, useEffect } from "react";
 import { useGaleryNavigation } from "../hooks/use-galery-navigation";
 import styles from "./main-galery-screen.module.css"
 import { Slider, styled } from "@mui/material";
+import { addToast, ToastProvider } from "@heroui/toast";
+import SwapHorizontalCircleIcon from '@mui/icons-material/SwapHorizontalCircle';
 
 const CustomSlider = styled(Slider)({
     height: 8,
@@ -41,8 +43,23 @@ export const MainGaleryScreen: FC = () => {
         <GaleryElement key={element.id} {...element} index={index} move={move} />
     ));
 
+    useEffect(() => {
+		addToast({
+			title: "MOVE IN TIMELINE",
+			description: "Desplázate por las secciones usando la barra de progreso. Mueve entre los puntos",
+			variant: "flat",
+			color: "default",
+			icon: <SwapHorizontalCircleIcon />,
+			shouldShowTimeoutProgress: true,
+			timeout: 20000,
+			hideCloseButton: true
+		})
+	}, [])
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
+            <ToastProvider placement={"top-center"} toastOffset={40} maxVisibleToasts={1} />
+
             {elements?.[currentElement]}
             <div className={styles.sliderContainer}>
                 <CustomSlider

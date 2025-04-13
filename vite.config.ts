@@ -12,5 +12,8 @@ export default defineConfig({
     alias: {
       '@': '/app'
     }
+  },
+  optimizeDeps: {
+    exclude: ['js-big-decimal']
   }
 })
