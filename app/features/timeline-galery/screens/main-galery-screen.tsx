@@ -49,7 +49,7 @@ export const MainGaleryScreen: FC = () => {
 			title: "MOVE IN TIMELINE",
 			description: "Desplázate por las secciones usando la barra de progreso.",
 			variant: "flat",
-			color: "default",
+			color: "primary",
 			icon: <SwapHorizontalCircleIcon />,
 			shouldShowTimeoutProgress: true,
 			timeout: 4000,
